@@ -1,0 +1,15 @@
+function compareTriplets(a, b) {
+  let al = 0;
+  let bo = 0;
+
+  for (i = 0; i < a.length; i++) {
+    if (a[i] > b[i]) {
+      al++;
+    } else if (a[i] < b[i]) {
+      bo++;
+    }
+  }
+  return [al, bo];
+}
+
+console.log(compareTriplets([1, 2, 3], [4, 2, 5]));
