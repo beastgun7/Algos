@@ -1,3 +1,5 @@
+Jonathan:
+
 function compareTriplets(a, b) {
   let al = 0;
   let bo = 0;
@@ -10,6 +12,14 @@ function compareTriplets(a, b) {
     }
   }
   return [al, bo];
+}
+
+console.log(compareTriplets([1, 2, 3], [4, 2, 5]));
+
+Pete: 
+
+function compareTriplets(a, b) {
+
 }
 
 console.log(compareTriplets([1, 2, 3], [4, 2, 5]));
