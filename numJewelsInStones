@@ -1,0 +1,40 @@
+Jonathan:
+
+var numJewelsInStones = function(J, S) {
+  let count = 0;
+  for (let i = 0; i < J.length; i++) {
+    for (let k = 0; k < S.length; k++) {
+      if (J[i] == S[k]) {
+        count++;
+      } else {
+      }
+    }
+  }
+  return count;
+};
+console.log(numJewelsInStones((J = "aA"), (S = "aAAbbbb")));
+
+var numJewelsInStones = function(J, S) {
+    var jewels = new Set();
+    var alphaJ = J.split("");
+    alphaJ.forEach(function(item, index) {
+       jewels.add(item);
+    });
+    var stonesS = S.split("");
+    var count = 0
+    stonesS.forEach(function(item, index) {
+        if (jewels.has(item)) {
+            count += 1;
+        }
+    });
+    console.log(stonesS);
+    return count;
+};
+console.log(numJewelsInStones((J = "aA"), (S = "aAAbbbb")));
+
+Pete:
+
+var numJewelsInStones = function(J, S) {
+
+};
+console.log(numJewelsInStones((J = "aA"), (S = "aAAbbbb")));
