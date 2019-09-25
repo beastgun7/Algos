@@ -1,0 +1,50 @@
+Jonathan:
+
+solution 1:
+var fib = function(N) {
+  if (N == 0) {
+    return 0;
+  }
+  if (N < 2) {
+    return 1;
+  }
+  var current = 1;
+  var previous = 1;
+  while (N != 2) {
+    var aux = current;
+    current += previous;
+    previous = aux;
+    N--;
+  }
+  return current;
+};
+console.log(fib(6));
+
+//Runtime: 52 ms, faster than 79.79%
+//Memory Usage: 33.9 MB, less than 68.18%
+
+solution 2:
+
+function fib(N) {
+  if (N == 0 || N == 1) {
+    return N;
+  }
+  F1 = 0;
+  F2 = 1;
+  for (var i = 1; i < N; i++) {
+    sum = F1 + F2;
+    F1 = F2;
+    F2 = sum;
+  }
+  return F2;
+}
+console.log(fib(6));
+
+//Runtime: 44 ms, faster than 98.19%
+//Memory Usage: 33.8 MB, less than 86.36%
+
+Pete:
+function fib(N) {
+
+}
+console.log(fib(6));
