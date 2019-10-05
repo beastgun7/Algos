@@ -1,0 +1,16 @@
+var lengthOfLastWord = function(s) {
+  if (s.length === 0) return 0;
+  s=s.trim();
+  let arr = s.split(" ");
+  let len = arr[arr.length-1].length;
+  return len;
+};
+
+console.log(lengthOfLastWord("Last Word"));
+console.log(lengthOfLastWord(""));
+console.log(lengthOfLastWord(" "));
+console.log(lengthOfLastWord("a "));
+console.log(lengthOfLastWord("b   a    "));
+
+// Runtime: 52 ms, faster than 75.75%
+// Memory Usage: 33.8 MB, less than 65.38%
