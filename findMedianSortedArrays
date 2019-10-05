@@ -1,3 +1,5 @@
+Jonathan: 
+
 var findMedianSortedArrays = function(nums1, nums2) {
   nums = [];
   nums = nums1.concat(nums2).sort(function(a, b) {
