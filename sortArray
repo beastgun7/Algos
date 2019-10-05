@@ -1,0 +1,65 @@
+Jonathan:
+
+Solution 1:
+var sortArray = function(nums) {
+  nums.sort();
+  temp = 0;
+  for (i = 0; i < nums.length; i++) {
+    for (k = 0; k < nums.length; k++) {
+      if (nums[i] < nums[k]) {
+        temp = nums[i];
+        nums[i] = nums[k];
+        nums[k] = temp;
+      }
+    }
+  }
+  return nums;
+};
+console.log(sortArray([-4, 0, 7, 4, 9, -5, -1, 0, -7, -1]));
+
+//returns [-7,-5,-4,-1,-1,0,0,4,7,9]
+
+// Runtime: 8788 ms, faster than 5.04%
+// Memory Usage: 41.3 MB, less than 100.00%
+
+solution 2:
+var sortArray = function(nums) {
+  if (nums.length <= 1) {
+    return nums;
+  }
+  let left = [],
+    right = [];
+  //find pivot
+  let pivotIndex = Math.floor(nums.length / 2);
+  let pivot = nums.splice(pivotIndex, 1)[0];
+  console.log(pivotIndex, "pivotIndex");
+  //[5,4,3,2,1]
+  console.log(pivot, "pivot");
+  //[-5,9,4,-1,0]
+  for (let i of nums) {
+    //partition
+    if (i < pivot) {
+      left.push(i);
+    } else {
+      right.push(i);
+    }
+  }
+  return sortArray(left).concat([pivot], sortArray(right));
+};
+console.log(sortArray([-4, 0, 7, 4, 9, -5, -1, 0, -7, -1]));
+
+//[-7,-5,-4,-1,-1,0,0,4,7,9]
+
+//Runtime: 108 ms, faster than 72.46%
+//Memory Usage: 54.4 MB, less than 42.86%
+
+solution 3:
+
+var sortArray = function(nums) {
+  return nums.sort((a, b) => a - b);
+};
+
+console.log(sortArray([-4, 0, 7, 4, 9, -5, -1, 0, -7, -1]));
+
+//Runtime: 104 ms, faster than 76.31%
+//Memory Usage: 41.9 MB, less than 42.86%
