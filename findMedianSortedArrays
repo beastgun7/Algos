@@ -1,0 +1,18 @@
+var findMedianSortedArrays = function(nums1, nums2) {
+  nums = [];
+  nums = nums1.concat(nums2).sort(function(a, b) {
+    return a - b;
+  });
+  console.log(nums);
+  if (nums.length % 2 == 0) {
+    return (nums[nums.length / 2 - 1] + nums[nums.length / 2]) / 2;
+  } else {
+    return nums[Math.floor(nums.length / 2)];
+  }
+};
+console.log(findMedianSortedArrays([1, 2, 3], [4, 5, 6]));
+console.log(findMedianSortedArrays([1, 2], [4, 5, 6]));
+console.log(findMedianSortedArrays([3], [-2, -1]));
+
+// Runtime: 120 ms, faster than 52.98%
+// Memory Usage: 38.9 MB, less than 91.49%
