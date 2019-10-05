@@ -1,0 +1,29 @@
+var rangeSumBST = function(global, L, R) {
+  let result = 0;
+  dfs(global);
+  return result;
+
+  function dfs(global) {
+    if (global == null) {
+      return;
+    }
+    if (global.val >= L && global.val <= R) {
+      result += global.val;
+    }
+    if (global.val == L) {
+      dfs(global.right);
+    } else if (global.val == R) {
+      dfs(global.left);
+    } else {
+      dfs(global.left);
+      dfs(global.right);
+    }
+  }
+};
+
+console.log(
+  rangeSumBST((global = [10, 5, 15, 3, 7, null, 18]), (L = 7), (R = 15))
+);
+
+//Runtime: 156 ms, faster than 88.71%
+//Memory Usage: 70.9 MB, less than 15.38%
