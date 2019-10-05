@@ -1,0 +1,10 @@
+Jonathan:
+
+var defangIPaddr = function(address) {
+  return address.split('.').join('[.]')
+};
+
+console.log(defangIPaddr("255.100.50.0"))
+
+//Runtime: 56 ms, faster than 43.08%
+//Memory Usage: 34 MB, less than 100.00%
