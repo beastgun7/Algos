@@ -1,0 +1,10 @@
+UPDATE salary SET sex =
+CASE
+When sex = 'f' THEN 'm'
+ELSE 'f'
+end;
+
+//Runtime: 174 ms, faster than 34.63%
+//Runtime: 146 ms, faster than 73.07%
+//Runtime: 177 ms, faster than 31.33%
+
