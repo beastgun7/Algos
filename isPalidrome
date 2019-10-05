@@ -1,3 +1,5 @@
+Jonathan:
+
 function isPalidrome(x) {
   arr = [];
   for (let i = 0; i < x.length; i++) {
