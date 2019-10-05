@@ -1,0 +1,10 @@
+var sortedSquares = function(A) {
+  for (i = 0; i < A.length; i++) {
+    A[i] = A[i] * A[i];
+  }
+  return A.sort((a, b) => a - b);
+};
+console.log(sortedSquares([-4, -1, 0, 3, 10]));
+
+//Runtime: 144 ms, faster than 42.51%
+//Memory Usage: 42.5 MB, less than 88.89%
