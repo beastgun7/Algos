@@ -1,0 +1,11 @@
+function isPalidrome(x) {
+  arr = [];
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] != x[x.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isPalidrome("raececar"));
+console.log(isPalidrome("racecar"));
