@@ -1,0 +1,26 @@
+Jonathan:
+
+var selfDividingNumbers = function(left, right) {
+  var arr = [];
+  for (var i = left; i <= right; i++) {
+    if (i < 10) {
+      arr.push(i);
+    }
+    if (i > 10) {
+      var iS = i.toString();
+      var count = 0;
+      for (var k = 0; k < iS.length; k++) {
+        var iN = parseInt(iS.charAt(k));
+        console.log(iN);
+        if (i % iN == 0) {
+          count++;
+        }
+      }
+      if (count == iS.length) {
+        arr.push(i);
+      }
+    }
+  }
+  return arr;
+};
+console.log(selfDividingNumbers(1, 22));
