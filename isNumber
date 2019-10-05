@@ -1,0 +1,7 @@
+const isNumber = s =>
+  /^ *[+-]?(\d+(\.\d+)?|(\.\d+)|(\d+\.))(e[+-]?\d+)? *$/.test(s);
+console.log(isNumber(".003"));
+
+//Runtime: 80 ms, faster than 82.90%
+//Memory Usage: 36.3 MB, less than 100.
+
