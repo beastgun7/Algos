@@ -1,7 +1,22 @@
+Jonathan:
+
+Solution 1:
+
 const isNumber = s =>
   /^ *[+-]?(\d+(\.\d+)?|(\.\d+)|(\d+\.))(e[+-]?\d+)? *$/.test(s);
 console.log(isNumber(".003"));
 
 //Runtime: 80 ms, faster than 82.90%
 //Memory Usage: 36.3 MB, less than 100.
+
+Solution 2:
+
+var isNumber = function(s) {
+    return (/^ *[+-]?(\d+(\.\d+)?|(\.\d+)|(\d+\.))(e[+-]?\d+)? *$/).test(s);
+
+    };
+console.log(isNumber(2))
+
+//Runtime: 88 ms, faster than 50.39%
+//Memory Usage: 36.3 MB, less than 100.00%
 
