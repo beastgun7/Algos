@@ -1,0 +1,22 @@
+Jonathan:
+
+function findNumber(arr, k) {
+  count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr == null || arr.length == 0) {
+      return "NO";
+    }
+    if (arr[i] == k) {
+      count++;
+    } else {
+    }
+  }
+  if (count == 1) {
+    return "YES";
+  } else {
+    return "NO";
+  }
+}
+console.log(findNumber([1,2,3,4],3));
+console.log(findNumber([1,2,3,4,5,3,7,9,23,7,9,1],24));
+
