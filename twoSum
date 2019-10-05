@@ -1,0 +1,48 @@
+Jonathan:
+
+solution 1:
+
+var twoSum = function(nums, target) {
+  let dict = {};
+  let rem = 0;
+  for (let i = 0; i < nums.length; i++) {
+    rem = target - nums[i];
+    if (dict[nums[i]] == undefined) {
+      dict[rem] = i;
+    } else {
+      return [dict[nums[i]], i];
+    }
+  }
+};
+
+console.log(twoSum([1, 2, 5, 6, 8, 7], 11));
+console.log(twoSum([8, 2, 16, 6, 1, 9], 11));
+console.log(twoSum([3, 2, 4], 6));
+
+//Runtime: 104 ms, faster than 46.43%
+//Memory Usage: 34.7 MB, less than 66.12%
+
+solution 2:
+
+var twoSum = function(nums, target) {
+  dict = {};
+  let rem = 0;
+  for (let i = 0; i < nums.length; i++) {
+    rem = target - nums[i];
+    if (dict[nums[i]] == undefined) {
+      dict[rem] = i;
+    } else {
+      return [dict[nums[i]], i];
+    }
+  }
+};
+
+console.log(twoSum([2, 7, 11, 15], 9));
+console.log(twoSum([1, 2, 5, 6, 8, 7], 11));
+console.log(twoSum([8, 2, 16, 6, 1, 9], 11));
+console.log(twoSum([3, 2, 4], 6));
+
+// Runtime: 52 ms, faster than 92.79%
+// Memory Usage: 34.5 MB, less than 87.19%
+
+
