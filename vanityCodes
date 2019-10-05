@@ -1,0 +1,59 @@
+Jonathan:
+
+dic = {A:2, B:2, C:2, D:3, E:3, F:3, G:4, H:4, I:4, J:5, K:5, L:5, M:6, N:6, O:6, P:7, Q:7, R:7, S:7, T:8, U:8, V:8, W:9, X:9, Y:9, Z:9}
+function vanity(codes, numbers) {
+  let dict = {
+    A: "2",
+    B: "2",
+    C: "2",
+    D: "3",
+    E: "3",
+    F: "3",
+    G: "4",
+    H: "4",
+    I: "4",
+    J: "5",
+    K: "5",
+    L: "5",
+    M: "6",
+    N: "6",
+    O: "6",
+    P: "7",
+    Q: "7",
+    R: "7",
+    S: "7",
+    T: "8",
+    U: "8",
+    V: "8",
+    W: "9",
+    X: "9",
+    Y: "9",
+    Z: "9"
+  };
+  let codeAsNumber = [];
+  for (let i = 0; i < codes.length; i++) {
+    let tempString = "";
+    for (let j = 0; j < codes[i].length; j++) {
+      tempString += dict[codes[i][j]];
+    }
+    codeAsNumber.push(tempString);
+  }
+  let resultSet = new Set();
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < codeAsNumber.length; j++) {
+      if (numbers[i].includes(codeAsNumber[j])) {
+        if (!resultSet.has(numbers[i])) {
+          resultSet.add(numbers[i]);
+        }
+      }
+    }
+  }
+  let result = new Array(...resultSet);
+  return result.sort();
+}
+console.log(
+  vanity(
+    [3, "TWLO", "CODE", "HTCH", 5],
+    [+1747482438, +14157088956, +919810155555, +15109926333, +1415123456]
+  )
+);
