@@ -1,0 +1,44 @@
+Joanthan:
+
+solution 1:
+
+var sortArrayByParity = function(A) {
+  S = [];
+  for (i = 0; i < A.length; i++) {
+    if (A[i] % 2 == 0) {
+      S.push(A[i]);
+    }
+  }
+  for (i = 0; i < A.length; i++) {
+    if (A[i] % 2 != 0) {
+      S.push(A[i]);
+    }
+  }
+  return S;
+};
+
+console.log(sortArrayByParity([1, 2, 3, 4, 5]));
+// returns [2,4,1,3,5]
+
+//Runtime: 84 ms, faster than 41.14%
+//Memory Usage: 37.8 MB, less than 8.00%
+
+solution 2:
+
+var sortArrayByParity = function(A) {
+    E = [];
+    O = [];
+    for (i = 0; i < A.length; i++) {
+      if (A[i] % 2 == 0) {
+        E.push(A[i]);
+      } else {
+        O.push(A[i]);
+      }
+    }
+    return [...E, ...O];
+  };
+  console.log(sortArrayByParity([1, 2, 3, 4, 5]));
+  
+//Runtime: 80 ms, faster than 59.67%
+//Memory Usage: 37.7 MB, less than 8.00%
+
