@@ -1,0 +1,23 @@
+var reverse = function(x) {
+  var num = Math.abs(x);
+
+  let reverseNum = num
+    .toString()
+    .split("")
+    .reverse()
+    .join("");
+  if (reverseNum > 2 ** 31 || -reverseNum < -(2 ** 31) || x == 0) {
+    return 0;
+  }
+  if (x < 0) {
+    return -parseInt(reverseNum);
+  } else {
+    return parseInt(reverseNum);
+  }
+};
+console.log(reverse(120));
+console.log(reverse(247));
+console.log(reverse(-247));
+
+//Runtime: 72 ms, faster than 77.97%
+//Memory Usage: 35.8 MB, less than 78.12%
