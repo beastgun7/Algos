@@ -1,0 +1,17 @@
+Jonathan:
+
+var lengthOfLastWord = function(s) {
+  if (s[s.length - 1] == undefined) {
+    return 0;
+  }
+  count = 0;
+  for (let i = 0; i < s[s.length - 1].length; i++) {
+    count++;
+  }
+  return count;
+};
+console.log(lengthOfLastWord(["last", "word"]));
+console.log(lengthOfLastWord(["last", "word", "truely"]));
+console.log(lengthOfLastWord([]));
+console.log(lengthOfLastWord(["move"]));
+
