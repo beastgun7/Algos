@@ -1,0 +1,14 @@
+var toLowerCase = function(str) {
+    var re = /^[A-Z]+$/
+    var arr = []
+    for(var i = 0; i<str.length;i++){
+        if(re.test(str.charAt(i)) == true){
+            var code = str.charCodeAt(i) + 32
+            arr.push(String.fromCharCode(code))
+        } else {
+            arr.push(str.charAt(i))
+        }
+    }
+    arr = arr.join("")
+    return arr
+};
