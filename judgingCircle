@@ -1,0 +1,26 @@
+Joanthan:
+
+var judgeCircle = function(moves) {
+  let y = 0,
+    x = 0;
+  for (var i = 0; i < moves.length; i++) {
+    if (moves[i] == "U") {
+      y++;
+    } else if (moves[i] == "D") {
+      y--;
+    } else if (moves[i] == "L") {
+      x--;
+    } else if (moves[i] == "R") {
+      x++;
+    }
+  }
+  if (y == 0 && x == 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(judgeCircle(["R", "L", "U", "D"]));
+
+//Runtime: 60 ms, faster than 82.16%
+//Memory Usage: 36 MB, less than 66.67%
